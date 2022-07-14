@@ -61,13 +61,17 @@ main {
 }
 main img {
   max-height: auto;
-  max-width: 25rem;
+  max-width: 20rem;
   width: 30%;
-  z-index: 10;
+  animation: 2s ease-in-out infinite alternate slide;
 }
-main img:hover {
-  transform: translate3d(60%, 30%, 0px);
-  transition: transform 2000ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s ease-out;
+@keyframes slide {
+  from {
+    transform: translate3d(0);
+  }
+  to {
+    transform: translate3d(20%, 20%, 0px);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
