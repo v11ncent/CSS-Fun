@@ -3,12 +3,14 @@ section#header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 1em 0.75em;
-    border: 1px solid black;
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
 
-    div {
-       
-
+    div { // Added div for potential position: relative stuff
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        
         h1 {
             font-family: $font__header-bold;
             font-size: clamp(0.75em, 2vw, 3em);
@@ -31,7 +33,6 @@ section#header {
             justify-content: flex-end;
             width: 100%;
             font-size: 1.25vw;
-            margin-top: 1em;
             
             ul {
                 display: flex;
@@ -40,6 +41,10 @@ section#header {
                     margin-left: 3em;
                 }
             }
+        }
+
+        p {
+            text-align: right;
         }
     }
 }

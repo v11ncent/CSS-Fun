@@ -1,3 +1,17 @@
 section#content {
-    font-size: 1.25vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1em;
+    grid-template-areas: 'grid__header-experience grid__header-projects'
+                         'grid__content-exprience grid__content-projects';
+    font-size: 1vw;
+
+    div#header__experience {
+        grid-area: grid__header-experience;
+    }
+
+    div#header__projects {
+        grid-area: grid__header-projects;
+    }
 }

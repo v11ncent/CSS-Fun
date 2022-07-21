@@ -61,8 +61,13 @@ section#header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 1em 0.75em;
-  border: 1px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+}
+section#header div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 section#header div h1 {
   font-family: "Sequel 100 Black", sans-serif;
@@ -83,7 +88,6 @@ section#header div nav {
   justify-content: flex-end;
   width: 100%;
   font-size: 1.25vw;
-  margin-top: 1em;
 }
 section#header div nav ul {
   display: flex;
@@ -91,9 +95,23 @@ section#header div nav ul {
 section#header div nav ul li {
   margin-left: 3em;
 }
+section#header div p {
+  text-align: right;
+}
 
 section#content {
-  font-size: 1.25vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1em;
+  grid-template-areas: "grid__header-experience grid__header-projects" "grid__content-exprience grid__content-projects";
+  font-size: 1vw;
+}
+section#content div#header__experience {
+  grid-area: grid__header-experience;
+}
+section#content div#header__projects {
+  grid-area: grid__header-projects;
 }
 
 section#aesthetics {
@@ -101,6 +119,11 @@ section#aesthetics {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Noto Sans", sans-serif;
+}
+
+html {
+  background-color: #dfdfdf;
 }
 
 body {
@@ -111,8 +134,11 @@ body {
   grid-template-areas: "grid__cell-4 grid__cell-4 grid__cell-4 grid__cell-3" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-6 grid__cell-6 grid__cell-6";
   max-width: 1200px;
   margin: 2em auto;
-  padding: 0 0.5em;
-  line-height: 1.25;
+  line-height: 1.5;
+  box-shadow: 1.5em 1.5em;
+  border: 1px solid black;
+  background-color: white;
+  padding-right: 1em;
 }
 body section {
   overflow: hidden;
@@ -129,7 +155,7 @@ body section#content {
 body section#header {
   grid-area: grid__cell-4;
 }
-body section#qr-code {
+body section#qr_code {
   grid-area: grid__cell-3;
 }
 body section#aesthetics {
@@ -141,11 +167,29 @@ img {
   max-width: 100%;
 }
 
+h2 {
+  font-family: "Sequel 100 Black", sans-serif;
+  font-size: 1.25vw;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.fit-image-to-container {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .fit-word-to-width {
   display: flex;
   justify-content: space-evenly;
   font-family: "Sequel 100 Black", sans-serif;
   font-size: 1.5vw;
+  color: white;
+  background-color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
