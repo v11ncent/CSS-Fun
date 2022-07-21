@@ -1,0 +1,16 @@
+/*========================*/
+/*         Fonts          */
+/*========================*/
+
+@font-face {
+    font-family: 'Sequel 100 Medium';
+    src: url('../../fonts/Sequel_100_Black/Sequel100Black-75.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Sequel 100 Black';
+    src: url('../../fonts/Sequel_100_Black/Sequel100Black-105.ttf') format('truetype');
+}
+
+$font__header-bold: 'Sequel 100 Black', sans-serif;
+$font__text-medium: 'Sequel 100 Medium', sans-serif;

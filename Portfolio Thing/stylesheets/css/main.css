@@ -1,0 +1,151 @@
+/*========================*/
+/*         Fonts          */
+/*========================*/
+@font-face {
+  font-family: "Sequel 100 Medium";
+  src: url("../../fonts/Sequel_100_Black/Sequel100Black-75.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sequel 100 Black";
+  src: url("../../fonts/Sequel_100_Black/Sequel100Black-105.ttf") format("truetype");
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+section#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1em 0.75em;
+  border: 1px solid black;
+}
+section#header div h1 {
+  font-family: "Sequel 100 Black", sans-serif;
+  font-size: clamp(0.75em, 2vw, 3em);
+}
+section#header div div:nth-of-type(1) {
+  -webkit-text-stroke: 1.5px black;
+  text-stroke: 1px black;
+  color: white;
+}
+section#header div div:nth-of-type(2) {
+  margin-left: 2em;
+  white-space: nowrap;
+}
+section#header div nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 1.25vw;
+  margin-top: 1em;
+}
+section#header div nav ul {
+  display: flex;
+}
+section#header div nav ul li {
+  margin-left: 3em;
+}
+
+section#content {
+  font-size: 1.25vw;
+}
+
+section#aesthetics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "grid__cell-4 grid__cell-4 grid__cell-4 grid__cell-3" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-6 grid__cell-6 grid__cell-6";
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 0.5em;
+  line-height: 1.25;
+}
+body section {
+  overflow: hidden;
+}
+body section#image-one {
+  grid-area: grid__cell-1;
+}
+body section#image-two {
+  grid-area: grid__cell-5;
+}
+body section#content {
+  grid-area: grid__cell-2;
+}
+body section#header {
+  grid-area: grid__cell-4;
+}
+body section#qr-code {
+  grid-area: grid__cell-3;
+}
+body section#aesthetics {
+  grid-area: grid__cell-6;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.fit-word-to-width {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Sequel 100 Black", sans-serif;
+  font-size: 1.5vw;
+}
+
+/*# sourceMappingURL=main.css.map */
