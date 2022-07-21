@@ -74,7 +74,6 @@ section#header div {
 section#header div h1 {
   font-family: "Sequel 100 Black", sans-serif;
   font-size: clamp(2em, 2vw, 3em);
-  margin-bottom: 0.5em;
 }
 section#header div div:nth-of-type(1) {
   -webkit-text-stroke: 1.5px black;
