@@ -1,20 +1,20 @@
 html {
     // background-image: url('../../media/background-fixed.png');
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(33, 33, 33);
 }
 
 body {
     display: grid;
-    gap: 1em;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(5, auto);
+    column-gap: $column__gap;
     grid-template-areas: 'grid__cell-4 grid__cell-4 grid__cell-4 grid__cell-3'
                          'grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2'
                          'grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2'
                          'grid__cell-5 grid__cell-2 grid__cell-2 grid__cell-2'
-                         'grid__cell-5 grid__cell-6 grid__cell-6 grid__cell-6';
+                         'grid__cell-5 grid__cell-6 grid__cell-6 grid__cell-7';
     max-width: 1200px;
-    margin: 2em auto;
+    margin: 3em auto;
     line-height: 1.5;
     box-shadow: 1.5em 1.5em;
     border: 1px solid black;
@@ -25,12 +25,21 @@ body {
         overflow: hidden;
     }
 
+    section#image-one,
+    section#image-two {
+        background-color: black;
+    }
+
     section#image-one {
         grid-area: grid__cell-1;
     }
 
     section#image-two {
         grid-area: grid__cell-5;
+    }
+
+    section#picture__grid {
+        grid-area: grid__cell-7;
     }
 
     section#content {
@@ -57,8 +66,7 @@ img {
 
 h2 {
     font-family: $font__header-bold;
-    font-size: 1.25vw;
-    margin-bottom: 0.5em;
+    font-size: 1.5vw;
 }
 
 p {

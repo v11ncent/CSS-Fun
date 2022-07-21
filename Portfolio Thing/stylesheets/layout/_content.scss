@@ -2,10 +2,11 @@ section#content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 1em;
+    column-gap: $column__gap;
     grid-template-areas: 'grid__header-experience grid__header-projects'
                          'grid__content-exprience grid__content-projects';
     font-size: 1vw;
+    padding: 1em 0;
 
     div#header__experience {
         grid-area: grid__header-experience;
@@ -13,5 +14,9 @@ section#content {
 
     div#header__projects {
         grid-area: grid__header-projects;
+    }
+
+    h2 {
+        margin: 1em 0;
     }
 }

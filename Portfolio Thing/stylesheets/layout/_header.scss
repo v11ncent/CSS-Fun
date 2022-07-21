@@ -9,11 +9,11 @@ section#header {
     div { // Added div for potential position: relative stuff
         display: flex;
         flex-direction: column;
-        gap: 1em;
         
         h1 {
             font-family: $font__header-bold;
-            font-size: clamp(0.75em, 2vw, 3em);
+            font-size: clamp(2em, 2vw, 3em);
+            margin-bottom: 0.5em;
         }
     
         div:nth-of-type(1) {
@@ -31,14 +31,17 @@ section#header {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            width: 100%;
-            font-size: 1.25vw;
+            font-size: 1.35vw;
             
             ul {
                 display: flex;
     
                 li {
                     margin-left: 3em;
+                }
+
+                li:hover {
+                    color: red;
                 }
             }
         }

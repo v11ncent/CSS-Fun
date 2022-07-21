@@ -9,6 +9,9 @@
   font-family: "Sequel 100 Black";
   src: url("../../fonts/Sequel_100_Black/Sequel100Black-105.ttf") format("truetype");
 }
+/*========================*/
+/*   General Variables    */
+/*========================*/
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -67,11 +70,11 @@ section#header {
 section#header div {
   display: flex;
   flex-direction: column;
-  gap: 1em;
 }
 section#header div h1 {
   font-family: "Sequel 100 Black", sans-serif;
-  font-size: clamp(0.75em, 2vw, 3em);
+  font-size: clamp(2em, 2vw, 3em);
+  margin-bottom: 0.5em;
 }
 section#header div div:nth-of-type(1) {
   -webkit-text-stroke: 1.5px black;
@@ -86,14 +89,16 @@ section#header div nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
-  font-size: 1.25vw;
+  font-size: 1.35vw;
 }
 section#header div nav ul {
   display: flex;
 }
 section#header div nav ul li {
   margin-left: 3em;
+}
+section#header div nav ul li:hover {
+  color: red;
 }
 section#header div p {
   text-align: right;
@@ -103,9 +108,10 @@ section#content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 1em;
+  column-gap: 1.25em;
   grid-template-areas: "grid__header-experience grid__header-projects" "grid__content-exprience grid__content-projects";
   font-size: 1vw;
+  padding: 1em 0;
 }
 section#content div#header__experience {
   grid-area: grid__header-experience;
@@ -113,27 +119,38 @@ section#content div#header__experience {
 section#content div#header__projects {
   grid-area: grid__header-projects;
 }
+section#content h2 {
+  margin: 1em 0;
+}
 
 section#aesthetics {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
   font-family: "Noto Sans", sans-serif;
+  border-top: 1px solid black;
+  padding-top: 1em;
+}
+
+section#picture__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
 }
 
 html {
-  background-color: #dfdfdf;
+  background-color: #212121;
 }
 
 body {
   display: grid;
-  gap: 1em;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "grid__cell-4 grid__cell-4 grid__cell-4 grid__cell-3" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-6 grid__cell-6 grid__cell-6";
+  column-gap: 1.25em;
+  grid-template-areas: "grid__cell-4 grid__cell-4 grid__cell-4 grid__cell-3" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-1 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-2 grid__cell-2 grid__cell-2" "grid__cell-5 grid__cell-6 grid__cell-6 grid__cell-7";
   max-width: 1200px;
-  margin: 2em auto;
+  margin: 3em auto;
   line-height: 1.5;
   box-shadow: 1.5em 1.5em;
   border: 1px solid black;
@@ -143,11 +160,18 @@ body {
 body section {
   overflow: hidden;
 }
+body section#image-one,
+body section#image-two {
+  background-color: black;
+}
 body section#image-one {
   grid-area: grid__cell-1;
 }
 body section#image-two {
   grid-area: grid__cell-5;
+}
+body section#picture__grid {
+  grid-area: grid__cell-7;
 }
 body section#content {
   grid-area: grid__cell-2;
@@ -169,8 +193,7 @@ img {
 
 h2 {
   font-family: "Sequel 100 Black", sans-serif;
-  font-size: 1.25vw;
-  margin-bottom: 0.5em;
+  font-size: 1.5vw;
 }
 
 p {
